@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Creativity Unbound: Celebrating Diversity and Advocacy</title>
+      <link rel="stylesheet" href="css/general_styles.css">
+      <link rel="stylesheet" href="css/about_style.css">
+      
+
+    </head>
+ <body>
+   <div class="grid-container">
+      <div class="brand">Sports Partner</div>
+      <div class="page-links">
+         <a href="index.html"><button class="menu-button">Home</button></a>
+         <a href="gallery.html"><button class="menu-button">Gallery</button></a>
+         <a href="about.html"><button class="menu-button">About</button></a>
+      </div> <!-- closes the page-links div -->
+         <div class="main">
+            <h1>About us</h1>
+
+         </div> <!-- closes the main div -->
+      </div> <!-- closes the grid-container div -->
+      <div class="about-container">
+         <div id="about-item-1">
+         <figure class="section-icon">
+               <img src="images/images.png" alt="Weather icon">
+         </figure>
+            <h3>Current Weather</h3>>
+            <p>Temperature</p>
+            <p id="current_temperature">??</p>
+            <p>Wind Speed</p>
+            <p id="current_windspeed">??</p>
+
+         </div>
+         <div id="about-item-2">
+            <h3>Welcome to SportPartner!</h3>>
+            <p>We are dedicated to helping sports enthusiasts connect and find their perfect workout companions. </p>
+            <p>Whether you're seeking a running buddy to conquer the trails with or a tennis partner to sharpen your skills, SportPartner is your ultimate destination.</p>
+           
+         </div>
+         <div id="about-item-3">
+            <form id="subscribe-form">
+               <h5>Subscribe to our newsletters!</h5>>
+               <label for="firstName">First Name:</label>
+               <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+               <label for="suburb">Suburb:</label>
+               <input type="text" id="suburb" name="suburb" placeholder="Enter your suburb" required>
+
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+               
+               <input type="submit" value="Subscribe" id="subscribe-submit-button" disabled>
+            </form>
+            <div id="responseMessage"></div>
+         </div>
+         <div id="about-item-4">
+
+         </div>
+
+      </div> <!-- closes the about-container div -->
+      <script src="js/about_api.js"></script>
+ </body>
+</html>
