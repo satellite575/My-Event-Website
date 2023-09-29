@@ -1,0 +1,11 @@
+.centered-content > img{
+    width:30vw;
+    height:auto;
+    border-radius:50%;
+}
+
+.flex-main-content {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
