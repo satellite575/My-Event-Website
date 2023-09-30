@@ -3,8 +3,9 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title></title>
+      <title>LuminousOpus</title>
       <link rel="stylesheet" href="css/general_styles.css">
+      <link rel="stylesheet" href="css/index_styles.css">
       <link rel="stylesheet" href="css/gallery_styles.css">
      
     </head>
@@ -18,10 +19,16 @@
                 <a href="register.html"><button class="menu-button">Sign up</button></a>
             </div>
         </div> <!-- closes the page-links div -->
-        <img class = "home_splash" src="media/slide1.jpg" alt="images">
+        <div class = "home_splash">
+            <div class="carousel">
+                <img src="media/slide1.jpg" alt="slide1">
+                <img src="media/slide2.jpg" alt="slide2">
+                <img src="media/slide3.jpg" alt="slide3">
+            </div>
+        </div>
         <div class="main">
-            <div class="linkstyle">
-                Recommanded Music & Arists>>>>>>>
+            <div class ="linkstyle">
+                <a href="recommendation.html">&lt;&lt;&lt;&lt;&lt;&lt;Recommanded Music & Arists>>>>>>></a>
             </div>
         </div> <!-- closes the main div -->
         </div> <!-- closes the grid-container div -->
@@ -54,17 +61,16 @@
         </div> <!-- closes the gallery-container div -->
         <div class="main">
             <div class="linkstyle">
-                Different Musical Communities and Events>>>>>>>
+                <a href="recommendation.html">&lt;&lt;&lt;&lt;&lt;&lt;Different Musical Communities and Events>>>>>>></a>
             </div>
         </div> <!-- closes the main div -->
-        </div> <!-- closes the grid-container div -->
+
         <div class="gallery-container">
             <figure class="gallery-item" id="gallery-item-1">
                 <img src="media/pop.jpg" class="gallery-img" alt="classify1">
             </figure>
             <div class="gallery-item content" id="gallery-item-5">
                 <span>Pop Music</span>
-
             </div>
             <figure class="gallery-item" id="gallery-item-2">
                 <img src="media/rock.jpg" class="gallery-img" alt="classify2">
@@ -116,5 +122,6 @@
                 <a href="#help" class="content">Help</a>
             </nav>
         </footer>
+        <script src="js/index_interaction.js"></script>
     </body>
 </html>

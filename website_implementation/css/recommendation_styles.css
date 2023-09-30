@@ -1,0 +1,107 @@
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-recommendation{
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    background-image: url("../media/slide2.jpg");
+    background-size: cover;
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #000; /* 黑色背景 */
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: #000; /* 黑色背景 */
+}
+
+.sidebar a:hover {
+    background-color: #333; /* 深一些的黑色 */
+}
+
+.custom-block {
+    position: relative;
+    width: 95%;
+    max-width: 1400px; /* 设置最大宽度，根据需要调整 */
+    margin: 0 auto; /* 使用 auto 将区块水平居中 */
+    height: 300px; /* 设置区块的高度，根据需要调整 */
+    margin-bottom: 30px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#custom-block-1{
+    background-image: url('../media/paint\ the\ town\ red.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-2{
+    background-image: url('../media/FooFighters.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-3{
+    background-image: url('../media/DarksideoftheMoon.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-4{
+    background-image: url('../media/doolittle.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-overlay h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.text-overlay p {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+
+/* 根据需要添加其他样式 */
