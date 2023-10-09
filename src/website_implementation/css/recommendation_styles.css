@@ -1,0 +1,101 @@
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-recommendation {
+    display: flex;
+}
+
+.sidebar {
+    width: 280px; /* 加长sidebar */
+    height: 100%;
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    font-size: 45px; /* 放大字体 */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px; /* 调整字边距 */
+    margin-bottom: 10px; /* 调整间距 */
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+/* gallery_styles.css */
+.custom-block {
+    flex: 1; /* 让剩下的部分占满剩余空间 */
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+
+#custom-block-1{
+    background-image: url('../media/paint\ the\ town\ red.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-2{
+    background-image: url('../media/FooFighters.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-3{
+    background-image: url('../media/DarksideoftheMoon.jpg');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#custom-block-4{
+    background-image: url('../media/doolittle.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-overlay h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.text-overlay p {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+
+/* 根据需要添加其他样式 */

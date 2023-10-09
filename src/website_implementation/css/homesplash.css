@@ -1,0 +1,48 @@
+.home_splash{
+    width: 100%; /* 设置图片宽度为100%，即与父容器同宽 */
+    height: 60vh; /* 让高度按照宽度比例自动调整 */
+    overflow: hidden;
+    position: relative;
+}
+
+.img_box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+/* 图片大小 */
+.home_splash .img_box img {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* 左箭头 */
+.left_btn {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 3px;
+    /* 将鼠标样式改为小手 */
+    cursor: pointer;
+}
+
+.right_btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    padding-left: 5px;
+    cursor: pointer;
+}

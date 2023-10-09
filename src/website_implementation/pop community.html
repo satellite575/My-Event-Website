@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Pop Music</title>
+      <link rel="stylesheet" href="css/general_styles.css">
+      <link rel="stylesheet" href="css/community_styles.css">
+      <link rel="stylesheet" href="css/gallery_styles.css">
+     
+    </head>
+    <body>
+
+        <div class="grid-container">
+            <a href="index.html">
+                <div class="brand">
+                    <img src="media/logo.png" alt="logo">
+                </div>
+            </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </div> <!-- closes the page-links div -->
+        <div class="community-splash">
+            <div class="community-slogan">
+                <h1>Pop Music</h1>
+            </div>
+        </div>
+    
+        <div class="comments-container">
+            
+            <div class="comment-form">
+                <h2>SPEAK FREELY!</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" placeholder="Your username" required>
+                
+                <label for="comment">Comment:</label>
+                <textarea id="comment" placeholder="Write your comment here" required></textarea>
+                
+                <button onclick="addComment()">Submit Comment</button>
+            </div>
+            <h2>Comments</h2>
+            <div id="comments-list">
+                <!-- 评论将动态添加到这里 -->
+            </div>
+        </div>
+    
+        <!-- 其他页面内容 -->
+    
+        <script src="your-fetch-polyfill.js"></script>
+        <script src="pop community.html"></script>
+    </body>
+</html>

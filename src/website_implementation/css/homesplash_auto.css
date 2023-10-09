@@ -1,0 +1,20 @@
+.home_splash{
+    width: 100%; /* 设置图片宽度为100%，即与父容器同宽 */
+    height: 60vh; /* 让高度按照宽度比例自动调整 */
+    overflow: hidden;
+    position: relative;
+}
+
+.img_box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+/* 图片大小 */
+.home_splash .img_box img {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
