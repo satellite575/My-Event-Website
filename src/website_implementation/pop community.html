@@ -7,7 +7,6 @@
       <link rel="stylesheet" href="css/general_styles.css">
       <link rel="stylesheet" href="css/community_styles.css">
       <link rel="stylesheet" href="css/gallery_styles.css">
-     
     </head>
     <body>
 
@@ -33,12 +32,12 @@
             <div class="comment-form">
                 <h2>SPEAK FREELY!</h2>
                 <label for="username">Username:</label>
-                <input type="text" id="username" placeholder="Your username" required>
+                <input type="text" id="username" name="username" placeholder="Your username" required>
                 
                 <label for="comment">Comment:</label>
-                <textarea id="comment" placeholder="Write your comment here" required></textarea>
+                <textarea id="comment" name="comment" placeholder="Write your comment here" required></textarea>
                 
-                <button onclick="addComment()">Submit Comment</button>
+                <button>Submit Comment</button>
             </div>
             <h2>Comments</h2>
             <div id="comments-list">
@@ -48,7 +47,6 @@
     
         <!-- 其他页面内容 -->
     
-        <script src="your-fetch-polyfill.js"></script>
-        <script src="pop community.html"></script>
+        <script src="js/community_interaction.js"></script>
     </body>
 </html>

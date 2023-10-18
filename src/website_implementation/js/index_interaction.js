@@ -57,3 +57,23 @@ function rightNext(){
 
 doms.leftbtn.onclick = leftNext;
 doms.rightbtn.onclick = rightNext;
+
+/* 自动轮播 */
+function autoPlay() {
+    timer = setInterval(function () {
+      rightNext();
+    }, 3000);
+  }
+  
+  autoPlay();
+  
+  /* 鼠标悬停停止轮播 */
+  doms.imgbox.addEventListener("mouseover", function () {
+    clearInterval(timer);
+  });
+  
+  /* 鼠标移开继续轮播 */
+  doms.imgbox.addEventListener("mouseout", function () {
+    autoPlay();
+  });
+  

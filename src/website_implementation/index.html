@@ -10,68 +10,72 @@
      
     </head>
     <body>
-        <div class="grid-container">
-            <div class="brand">
+        <div class="grid-container" aria-labelledby="brandLabel">
+            <div class="brand" id="brandLabel" aria-label="LuminousOpus Logo">
                 <img src="media/logo.png" alt="logo">
             </div>
             <div class="page-links">
-                <a href="login.html"><button class="menu-button">Log in</button></a>
-                <a href="register.html"><button class="menu-button">Sign up</button></a>
+                <a href="upload.html"><button class="menu-button" aria-label="upload">Upload</button></a>
+                <a href="register.html"><button class="menu-button" aria-label="profile">Profile</button></a>
             </div>
-        </div> <!-- closes the page-links div -->
-        <div class="home_splash">
-            <div class="img_box">
+        </div>
+        
+        <div class="home_splash" aria-labelledby="homeSplashLabel">
+            <div class="img_box" aria-label="Image Slider">
                 <img src="media/slide1.jpg" alt="slide1">
                 <img src="media/slide2.jpg" alt="slide2">
                 <img src="media/slide3.jpg" alt="slide3">
             </div>
-            <!-- 左箭头 -->
-            <div class="left_btn">&lt;</div>
-            <!-- 右箭头 -->
-            <div class="right_btn">&gt;</div>
+            <div class="left_btn" aria-label="Previous Slide">&lt;</div>
+            <div class="right_btn" aria-label="Next Slide">&gt;</div>
         </div>
+    
         <div class="main">
-            <div class ="linkstyle">
-                <a href="recommendation.html">&lt;&lt;&lt;&lt;&lt;&lt;Recommanded Music & Arists>>>>>>></a>
+            <div class="linkstyle">
+                <a href="recommendation.html" aria-label="Recommended Music and Artists">&lt;&lt;&lt;&lt;&lt;&lt;Recommended Music & Artists>>>>>>></a>
             </div>
-        </div> <!-- closes the main div -->
-        </div> <!-- closes the grid-container div -->
-        <div class="gallery-container">
-            <figure class="gallery-item" id="gallery-item-1">
+        </div>
+    
+        <div class="gallery-container" aria-labelledby="galleryLabel">
+            <figure class="gallery-item" id="gallery-item-1" aria-labelledby="gallery-item-1-label">
                 <a href="recommendation.html">
                     <img src="media/album_cover1.jpg" class="gallery-img" alt="image1">
                 </a>
+                <div id="gallery-item-1-label" aria-label="Album: When we all fall asleep, where do we go?"></div>
             </figure>
-            <div class="gallery-item content" id="gallery-item-5">
+            <div class="gallery-item content" id="gallery-item-5" >
                 <a href="recommendation.html">
                     <span>When we all fall asleep</span>
                     <span>where do we go?</span>
                 </a>
             </div>
-            <figure class="gallery-item" id="gallery-item-2">
+            <figure class="gallery-item" id="gallery-item-2" aria-labelledby="gallery-item-2-label">
                 <a href="recommendation.html">
                     <img src="media/album_cover2.jpg" class="gallery-img" alt="image2">
                 </a>
+                <div id="gallery-item-2-label" aria-label="Album: The Dreaming"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-6">
                 <a href="recommendation.html">
                     <span>The Dreaming</span>
                 </a>
             </div>
-            <figure class="gallery-item" id="gallery-item-3">
+            <figure class="gallery-item" id="gallery-item-3" aria-labelledby="gallery-item-3-label">
                 <a href="recommendation.html">
                     <img src="media/album_cover3.jpg" class="gallery-img" alt="image3">
                 </a>
+                <div id="gallery-item-3-label" aria-label="Album: Indigo"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-7">
                 <a href="recommendation.html">
                     <span>Indigo</span>
                 </a>
             </div>
-            <figure class="gallery-item" id="gallery-item-4">
+            <figure class="gallery-item" id="gallery-item-4" aria-labelledby="gallery-item-4-label">
                 <a href="recommendation.html">
                     <img src="media/album_cover4.jpg" class="gallery-img" alt="image4">
                 </a>
+                <div id="gallery-item-4-label" aria-label="Album: Blue Kentucky Girl"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-8">
                 <a href="recommendation.html">
@@ -79,73 +83,83 @@
                 </a>
             </div>
         </div> <!-- closes the gallery-container div -->
+
         <div class="main">
             <div class="linkstyle">
-                <a href="pop community.html">&lt;&lt;&lt;&lt;&lt;&lt;Different Musical Communities and Events>>>>>>></a>
+                <a href="pop community.html" aria-label="Different Musical Communities and Events">&lt;&lt;&lt;&lt;&lt;&lt;Different Musical Communities and Events>>>>>>></a>
             </div>
-        </div> <!-- closes the main div -->
-
-        <div class="gallery-container">
-            <figure class="gallery-item" id="gallery-item-1">
+        </div>
+    
+        <div class="gallery-container" aria-labelledby="classifyLabel">
+            <figure class="gallery-item" id="gallery-item-1" aria-labelledby="classifylabel-1">
                 <a href="pop community.html">
                     <img src="media/pop.jpg" class="gallery-img" alt="classify1">
                 </a>
+                <div id="classifylabel-1" aria-label="classify: pop"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-5" >
                 <a href="pop community.html">
                     <span>Pop Music</span>
                 </a>
             </div>
-            <figure class="gallery-item" id="gallery-item-2">
+            <figure class="gallery-item" id="gallery-item-2" aria-labelledby="classifylabel-2">
                 <img src="media/rock.jpg" class="gallery-img" alt="classify2">
+                <div id="classifylabel-2" aria-label="classify: rock"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-6">
                 <span>Rock Music</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-3">
+            <figure class="gallery-item" id="gallery-item-3" aria-labelledby="classifylabel-3">
                 <img src="media/hippop.jpg" class="gallery-img" alt="classify3">
+                <div id="classifylabel-3" aria-label="classify: hippop"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-7">
                 <span>HIP-POP</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-4">
+            <figure class="gallery-item" id="gallery-item-4" aria-labelledby="classifylabel-4">
                 <img src="media/Electronic.jpg" class="gallery-img" alt="classify4">
+                <div id="classifylabel-4" aria-label="classify: electronic"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-8">
                 <span>Electronic Music</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-9">
+            <figure class="gallery-item" id="gallery-item-9" aria-labelledby="classifylabel-5">
                 <img src="media/jazz.jpg" class="gallery-img" alt="classify5">
+                <div id="classifylabel-5" aria-label="classify: jazz"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-13">
                 <span>Jazz Music</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-10">
+            <figure class="gallery-item" id="gallery-item-10" aria-labelledby="classifylabel-6">
                 <img src="media/classical.jpg" class="gallery-img" alt="classify6">
+                <div id="classifylabel-1" aria-label="classify: classical"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-14">
                 <span>Classical Music</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-11">
+            <figure class="gallery-item" id="gallery-item-11" aria-labelledby="classifylabel-7">
                 <img src="media/blue.jpg" class="gallery-img" alt="classify7">
+                <div id="classifylabel-7" aria-label="classify: Blues"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-15">
                 <span>Blues</span>
             </div>
-            <figure class="gallery-item" id="gallery-item-12">
+            <figure class="gallery-item" id="gallery-item-12" aria-labelledby="classifylabel-8">
                 <img src="media/country.jpg" class="gallery-img" alt="classify8">
+                <div id="classifylabel-8" aria-label="classify: country"></div>
             </figure>
             <div class="gallery-item content" id="gallery-item-16">
                 <span>Country Music</span>
             </div>
         </div> <!-- closes the gallery-container div -->
-        <footer>
-            <nav>
+        <footer aria-labelledby="footerLabel">
+            <nav id="footerLabel">
                 <a href="#about" class="content">About Us</a>
                 <a href="#contact" class="content">Contact</a>
                 <a href="#help" class="content">Help</a>
             </nav>
         </footer>
+    
         <script src="js/index_interaction.js"></script>
     </body>
-</html>
+    </html>
