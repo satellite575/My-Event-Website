@@ -69,6 +69,7 @@
     margin-bottom: 5px;
     text-align: right;
     font-weight: bold;
+
 }
   
 .group-item.group-item-line label {
@@ -81,23 +82,26 @@
     padding: 8px;
     box-sizing: border-box;
     border: 2px solid #000;
+    border-radius: 4px;
 }
-  
+
 .group-item-textarea {
     display: flex;
     justify-content: flex-end;
 }
   
 .upload-form textarea {
-    width: calc(100% - 140px); /* 将 "Comment" 输入框宽度设为 100% */
+    width: 87%; /* 将 "Comment" 输入框宽度设为 100% */
     margin-bottom: 10px;
     padding: 8px;
     box-sizing: border-box;
     height: 150px; /* 指定 "Comment" 输入框的高度 */
+    font-weight: bold;
     border: 2px solid #000;
+    border-radius: 4px;
 }
   
-.upload-form button {
+.button {
     background-color: #ea0a0a;
     color: white;
     padding: 10px 15px;
@@ -106,10 +110,15 @@
     cursor: pointer;
     width: 120px;
 }
-  
-.upload-form button.flex-end {
-    align-self: flex-end; /* 将按钮右对齐 */
+
+.button:hover {
+    text-decoration: underline;
 }
+
+.button[type="submit"] {
+    align-self: flex-end;
+}
+  
   
   /* profile style css */
 .profile-info {
@@ -125,4 +134,3 @@
     font-size: 24px;
     margin: 0;
 }
-

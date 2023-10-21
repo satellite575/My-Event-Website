@@ -21,8 +21,13 @@ footer {
     .main,
     .gallery-container,
     .comment-form,
+    .grid-container
     #comments-list {
       width: 96vw;
+    }
+
+    .grid-container{
+      grid-template-columns: repeat(1, 1fr);
     }
     .gallery-container {
       grid-template-columns: repeat(2, 1fr);

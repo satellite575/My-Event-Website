@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Music API Example</title>
+		<title>LuminousOpus Upload</title>
 		<link rel="stylesheet" href="css/site_styles.css">
 		<link rel="stylesheet" href="css/general_styles.css">
 		<link rel="stylesheet" href="css/upload_styles.css">
@@ -50,7 +50,7 @@
 			</div>
 
 			<div class="right">
-				<div class="upload-form m-2">
+				<from id= "MusicianForm" class="upload-form m-2" enctype="multipart/form-data">
 					<div class="group-item">
 						<label for="username">Name:</label>
 						<input type="text" id="username" name="username" placeholder="Your username" required>
@@ -69,32 +69,34 @@
 					<div class="group-item group-item-line">
 						<label for="description">Description:</label>
 						<div class="group-item-textarea">
-							<textarea id="description" name="description" placeholder="Write your description here"
-								required></textarea>
+							<textarea id="description" name="description" rows="4" placeholder="Write your description here" required></textarea>
 						</div>
 					</div>
 
 					<div class="group-item group-item-line">
 						<label for="message">Message:</label>
 						<div class="group-item-textarea">
-							<textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+							<textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
 						</div>
 					</div>
 
 					<div class="group-item">
-						<label>Audo file</label>
-						<button>Submit</button>
+						<label for="Audio" id="Audio-file-input-label">Audio file</label>
+						<input style="border: none" type="file" id="Audio-file-input" name="audio" accept=".mp3, .wav, .ogg, .flac, .aac, .m4a" ><span id="selected-file-name"></span>
 					</div>
 
 					<div class="group-item">
 						<label for="code">Website code:</label>
-						<input type="text" id="code" name="code" placeholder="Your Website code" required>
+						<input  type="text" id="code" name="code" placeholder="Your Website code" required>
 					</div>
-					<button class="flex-end">post</button>
+
+					<div>
+						<input class="button" type="submit" value="Post">
+					</div>
+
 				</div>
 			</div>
 		</section>
-
 		<!-- <script src="upload_interaction.js"></script> -->
 	</body>
 </html>
