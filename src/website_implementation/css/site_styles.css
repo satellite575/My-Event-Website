@@ -1,0 +1,69 @@
+.m-2 {
+    margin: 20px;
+  }
+
+.p-2 {
+    padding: 20px;
+}
+  
+/* Tablet and phones in landscape */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+/* 
+.flex-container {
+    flex-direction: row;
+}
+aside {
+    display: grid;
+}
+footer {
+    display: none;
+} */
+    .main,
+    .gallery-container,
+    .comment-form,
+    #comments-list {
+      width: 96vw;
+    }
+    .gallery-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .sidebar {
+      font-size: 32px;
+    }
+    .right .item {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .sidebar {
+      font-size: 30px;
+    }
+    .list {
+      grid-template-columns: 1fr;
+    }
+}
+  
+/* Desktop: These rules are only applied if the screen is wider than 1194px */
+@media only screen and (min-width: 1195px) {
+    .main,
+    .gallery-container,
+    .comment-form,
+    #comments-list {
+      width: 75vw;
+    }
+    .gallery-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .right .item {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .sidebar {
+      font-size: 40px;
+    }
+    .list {
+      grid-template-columns: repeat(3, 32%);
+    }
+    /* .menu-button {
+      font-size: 18px;
+      padding: 20px 30px;
+    } */
+}
+  

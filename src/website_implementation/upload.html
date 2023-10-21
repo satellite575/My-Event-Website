@@ -1,71 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Music API Example</title>
+		<link rel="stylesheet" href="css/site_styles.css">
+		<link rel="stylesheet" href="css/general_styles.css">
 		<link rel="stylesheet" href="css/upload_styles.css">
+		<link rel="stylesheet" href="css/gallery_styles.css">
 	</head>
+
 	<body>
-		<div class="grid-container">
-		            <a href="index.html">
-		                <div class="brand">
-		                    <img src="img/logo.png" alt="logo">
-		                </div>
-		            </a>
-		            <div class="search-container">
-		                <input type="text" id="searchInput" placeholder="Search..." style="border-radius: 20px;">
-		                
-		            </div>
-		
-		        </div>
-				<!-- 左侧黑盒 -->
-				<div class="left">
-					<img src="media/rock.jpg" alt="Avatar">
-					<p>Name<br />
-					<span>gender</span></p>
-					<br />
-					<br />
-					<br />
-					<p>.Playlist</p>
-					<br />
-					<br />
-					
-					<p>.Upload</p>
-					<br />
-					<br />
-					
+
+		<!-- <div class="container">
+			<button id="postButton">Post Music Audio</button>
+			<button id="getButton">Get Musician Data</button>
+
+			<div id="resultContainer">
+				<h2>Results:</h2>
+				<pre id="resultOutput"></pre>
+			</div>
+		</div> -->
+
+		<header class="grid-container">
+			<a href="index.html">
+				<div class="brand">
+					<img src="media/logo.png" alt="logo">
 				</div>
-				<!-- 右盒 -->
-				<div class="r">
-					
-						<form action="javascript:void(0)" method="post">
-						<div>
-							<label>name</label>
-							<input type="text" name="" id="">
+			</a>
+			<div class="search-container">
+				<input type="text" id="searchInput" placeholder="Search...">
+				<button>Search</button>
+			</div>
+		</header>
+		<!-- closes the page-links div -->
+
+		<section class="main-recommendation">
+			<div class="sidebar">
+				<div class="profile-info">
+					<img src="media/album_cover2.jpg" alt="album_cover2">
+					<p>Name</p>
+					<p>Male</p>
+				</div>
+				<ul>
+					<li><a href="#section1">Playlist</a></li>
+					<li><a href="upload.html">Upload</a></li>
+				</ul>
+			</div>
+
+			<div class="right">
+				<div class="upload-form m-2">
+					<div class="group-item">
+						<label for="username">Name:</label>
+						<input type="text" id="username" name="username" placeholder="Your username" required>
+					</div>
+
+					<div class="group-item">
+						<label for="songtitle">Song title:</label>
+						<input type="text" id="songtitle" name="songtitle" placeholder="Your Song title" required>
+					</div>
+
+					<div class="group-item">
+						<label for="genre">Genre:</label>
+						<input type="text" id="genre" name="genre" placeholder="Your Genre" required>
+					</div>
+
+					<div class="group-item group-item-line">
+						<label for="description">Description:</label>
+						<div class="group-item-textarea">
+							<textarea id="description" name="description" placeholder="Write your description here"
+								required></textarea>
 						</div>
-							<div><label>songtitle </label><input type="text"></div>
-							<div><label>genre </label><input type="text"></div>
-							<div><label>description </label><input type="text"></div>
-							<div><label>message </label><input type="text"></div>
-							<div><label>audiofile </label>
-							<button class="post" style="background-color: red;
-							width:10%;border-radius: 5px;display: inline-block;margin-top: 20px;
-							margin-right:120px;">submit</button></div>
-							<div><label>websitecode </label><input type="text">
-							<br>
-							<button class="post" style="background-color: red;
-							width:10%;border-radius: 5px;float: right;margin-top: 20px;
-							margin-right:260px;">Post</button></div>
-							</form>
-							<!-- <button style="background-color: gainsboro;border:1px solid gray;
-							padding: 2px;color: black;width:5%;">选择文件</button>
-							<label style="color:grey;padding-left:0;">未选择任何文件</label> -->
-							
-						
-						
-					
-					
-					
+					</div>
+
+					<div class="group-item group-item-line">
+						<label for="message">Message:</label>
+						<div class="group-item-textarea">
+							<textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+						</div>
+					</div>
+
+					<div class="group-item">
+						<label>Audo file</label>
+						<button>Submit</button>
+					</div>
+
+					<div class="group-item">
+						<label for="code">Website code:</label>
+						<input type="text" id="code" name="code" placeholder="Your Website code" required>
+					</div>
+					<button class="flex-end">post</button>
 				</div>
+			</div>
+		</section>
+
+		<!-- <script src="upload_interaction.js"></script> -->
 	</body>
 </html>
