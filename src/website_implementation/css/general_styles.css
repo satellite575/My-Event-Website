@@ -10,15 +10,15 @@ body {
 }
 
 .content {
-    white-space: nowrap; /* 禁止换行 */
+    white-space: nowrap; 
     text-align: center;
     text-decoration: none;
 }
 
 .content span {
-    white-space: normal; /* 允许换行 */
-    display: block; /* 使每个文本块独占一行 */
-    margin-bottom: 5px; /* 设置段落之间的间距 */
+    white-space: normal; 
+    display: block; 
+    margin-bottom: 5px; 
     text-align: center;
 }
 
@@ -28,18 +28,16 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto 1fr;
 }
     
 .brand {
     grid-column: 1 / span 2;
     grid-row: 1;
-    background-color:#fff;
-    padding: 10px; /*new line*/
-    font-size: 30px; /*new line*/
-    font-weight:bold;/*new line*/
-    color: #000/*new line*/
+    background-color:#FFF;
+    padding: 10px; 
+    font-size: 30px; 
+    font-weight:bold;
 }
     
 .brand > img {
@@ -50,26 +48,24 @@ body {
     grid-column: 3 / span 2;
     grid-row: 1;
     text-align: right;
-    background-color:#fff;
+    background-color:#FFF;;
     padding: 10px;/*new line*/
 }
     
 .menu-button {
     font-size: 18px;
-    color: white;
+    color: #FFF;;
     background-color: #EA0A0A;
     padding: 20px 30px;
     border-style: initial;
     border-radius: 200px/100px;
-    border-color: white;
+    border-color: #FFF;;
     text-decoration: none;
 }
 
 .menu-button:hover{
     text-decoration: underline;
 }
-
-
 
 .main {
     grid-column: 1 / -1;
@@ -84,7 +80,7 @@ body {
     margin: 20px;
     padding: 20px;
     font-family: 'Paytone One', sans-serif;
-    color: white;
+    color: #FFF;;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -98,7 +94,7 @@ body {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: #FFF;;
     text-align: center;
     width: 100%;
     height: 100px;
@@ -117,15 +113,12 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #FFF;;
     text-decoration: none;
 }
 
 .search-container {
-    grid-column: 3 / span 2;
-    grid-row: 1;
-    text-align: right;
-    background-color:#fff;
+    background-color:#FFF;;
     padding: 30px;/*new line*/
     display: grid;
     grid-template-columns: 1fr 100px;
@@ -150,7 +143,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: #FFF;;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -170,7 +163,7 @@ button {
     margin: 20px;
     padding: 20px;
     font-family: 'Barlow Condensed', sans-serif;
-    color: white;
+    color: #FFF;;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -178,14 +171,15 @@ button {
     align-items: center;
     transition: text-decoration 0.3s ease; /* Add a smooth transition for the underline effect */
 
-    /* Additional styling for the link on hover */
+    
 }
-
+/* Additional styling for the link on hover */
 .gallery-link:hover {
     text-decoration: underline;
 }
 
+/*
 aside {
     display: none;
-  }
+  }*/
   

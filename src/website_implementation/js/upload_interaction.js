@@ -1,48 +1,56 @@
-const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/musicians/";
+/*global constant variables*/ 
+const AudioFileInputLabel = document.getElementById('Audio-file-input-label');
+const AudioFileInput = document.getElementById('Audio-file-input');
+const eventForm = document.querySelector('.upload-form')
+const my_website_code = "Lisa321";
+const baseURLMusicians = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/musicians/";
+const postMusicAudioMethod = 'POST';
 
-document.getElementById('postButton').addEventListener('click', () => {
-    const postMusicAudioMethod = "POST"; 
+/*constant functions*/
+const triggerFileInput = () =>{
+    AudioFileInput.click();
+};
 
-    var formdata = new FormData();
-    formdata.append("name", "Frank Fender");
-    formdata.append("song_title", "Reach for the stars");
-    formdata.append("genre", "Alt Country");
-    formdata.append("description", "This was expressing my angst at difficulties with the Brisbane Country Music scene");
-    formdata.append("message", "This is for all my fans, especially those who stood by me over the past few months");
-    formdata.append("audio_file", fileInput.files[0], "Paragraph 2.m4a");
-    formdata.append("website_code", "Pete123");
+const handleFileChange = () => {
+    if (fileName.length > 20) {
+        fileName = fileName.substring(0, 17) + '...';
 
-    var requestOptions = {
-        method: postMusicAudioMethod,
-        body: formdata,
-        redirect: 'follow'
-    };
+        AudioFileInputLabel.textContent = "Great!";
+    } else {
+        AudioFileInputLabel.textContent = "Please Choose A File";
+    }
+};
 
-    fetch(baseURL, requestOptions)
-        .then(response => response.text())
-        .then(result => {
-            document.getElementById('resultOutput').textContent = result;
-        })
-        .catch(error => console.log('error', error));
-});
+const handleFormSubmit = (event) => {
+    event.preventDefault();
 
-document.getElementById('getButton').addEventListener('click', () => {
-    const my_website_code = 'Pete123'
-    const queryParams = {
-        website_code: my_website_code,
-    };
-
-    const queryString = new URLSearchParams(queryParams).toString();
-    const urlWithParams = baseURL + "?" + queryString;
+    let formData = new FormData(event.target);
+    formData.append("website_code",my_website_code);
 
     const requestOptions = {
-        method: 'GET',
+        method: postMusicAudioMethod,
+        body: formData,
         redirect: 'follow'
     };
+    fetch(baseURLMusicians, requestOptions)
+    .then(response => response.json().then(data =>{
+        if (!response.ok) {
+            console.log("Server response:", data);
+            throw new Error("Network response had some problems");
+        }
+        return data;
+    }))
+    .then(data => {
+        console.log(data);
+        alert(`Your song "${data.song_title}" submitted sucessfully!`);
+    })
+    .catch(error => {
+        console.error("There was a problem with the fetch operation:", error.message);
+        alert("Error submitting file. Please try again.");
+    });
+};
 
-    fetch(urlWithParams, requestOptions)
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('resultOutput').textContent = JSON.stringify(data, null, 2);
-        });
-});
+/*event listener */
+AudioFileInputLabel.addEventListener('click', triggerFileInput);
+AudioFileInput.addEventListener('click', handleFileChange);
+eventForm.addEventListener('submit',handleFormSubmit);

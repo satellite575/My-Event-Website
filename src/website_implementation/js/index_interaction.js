@@ -1,55 +1,53 @@
-var doms ={
+var doms = {
     imgbox: document.querySelector('.img_box'),
     leftbtn: document.querySelector('.left_btn'),
     rightbtn: document.querySelector('.right_btn'),
 };
 
-/*记录目前这是第几张*/
+/* Record the current index */
 var curIndex = 0;
 
-/*移动轮播图到第几个板块*/
-function moveTo(index){
+/* Move the carousel to a specific index */
+function moveTo(index) {
     doms.imgbox.style.transform = `translateX(-${index}00%)`;
     doms.imgbox.style.transition = '.5s';
     curIndex = index;
 }
 
-function init(){
-    /*复制第一张图*/
+function init() {
+    /* Copy the first image */
     var first = doms.imgbox.firstElementChild.cloneNode(true);
-    /*复制最后一张图*/
+    /* Copy the last image */
     var last = doms.imgbox.lastElementChild.cloneNode(true);
-    /*将第一张图放到末尾*/
+    /* Place the first image at the end */
     doms.imgbox.appendChild(first);
-    /*将最后一张图放到开头*/
+    /* Place the last image at the beginning */
     doms.imgbox.insertBefore(last, doms.imgbox.firstElementChild);
-    /*将最后一张设置为绝对定位 */
+    /* Set the last image to absolute positioning */
     last.style.position = 'absolute';
     last.style.transform = 'translateX(-100%)'
 }
 
 init();
 
-function leftNext(){
-    if(curIndex == 0){
+function leftNext() {
+    if (curIndex == 0) {
         doms.imgbox.style.transform = 'translateX(-300%)';
         doms.imgbox.style.transition = 'none';
-        doms.imgbox.clientHeight;/*强制渲染 */
+        doms.imgbox.clientHeight; /* Force a reflow */
         moveTo(2);
-    }
-    else{
+    } else {
         moveTo(curIndex - 1);
     }
 }
 
-function rightNext(){
-    if(curIndex == 2){
+function rightNext() {
+    if (curIndex == 2) {
         doms.imgbox.style.transform = 'translateX(100%)';
         doms.imgbox.style.transition = 'none';
-        doms.imgbox.clientHeight;/*强制渲染 */
+        doms.imgbox.clientHeight; /* Force a reflow */
         moveTo(0);
-    }
-    else{
+    } else {
         moveTo(curIndex + 1);
     }
 
@@ -58,22 +56,21 @@ function rightNext(){
 doms.leftbtn.onclick = leftNext;
 doms.rightbtn.onclick = rightNext;
 
-/* 自动轮播 */
+/* Auto play */
 function autoPlay() {
     timer = setInterval(function () {
-      rightNext();
-    }, 3000);
-  }
-  
-  autoPlay();
-  
-  /* 鼠标悬停停止轮播 */
-  doms.imgbox.addEventListener("mouseover", function () {
+        rightNext();
+    }, 2500);
+}
+
+autoPlay();
+
+/* Pause autoplay on mouse hover */
+doms.imgbox.addEventListener("mouseover", function () {
     clearInterval(timer);
-  });
-  
-  /* 鼠标移开继续轮播 */
-  doms.imgbox.addEventListener("mouseout", function () {
+});
+
+/* Resume autoplay on mouse leave */
+doms.imgbox.addEventListener("mouseout", function () {
     autoPlay();
-  });
-  
+});

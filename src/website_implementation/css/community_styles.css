@@ -1,75 +1,172 @@
-.community-splash{
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    background-image: url("../media/slide2.jpg");
-    background-size: cover;
-    background-position: 50% 70%;
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
-    
+.community-splash {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /* background-image: url("../media/slide2.jpg"); */
+  /* background-size: cover; */
+  /* background-position: 50% 70%; */
+  /* background-repeat: no-repeat; */
+  margin-bottom: 30px;
 }
 
-.community-slogan{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EA0A0A;
-    width: 200px;
-    height: 200px;
-    color: white;
-    padding: 20px;
+.community-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EA0A0A;
+  width: 200px;
+  /* height: 200px; */
+  color: white;
+  /* padding: 20px; */
 }
 
 .comments-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments-container h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .comments-container h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .comment-form {
-    width: 1000px;
-    margin-top: 20px;
-    text-align: left; /* 将整体左对齐 */
-    display: flex;
-    flex-direction: column; /* 垂直方向排列 */
-    align-items: flex-start; /* 元素左对齐 */
+  margin-top: 20px;
+  text-align: left; /* 将整体左对齐 */
+  display: flex;
+  flex-direction: column; /* 垂直方向排列 */
+  align-items: flex-start; /* 元素左对齐 */
+  margin: 0 auto;
+}
+
+.comment-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
 }
 
 .comment-form label {
-    margin-bottom: 5px;
-    text-align: left;
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 .comment-form input {
-    width: 100%; /* 将 "Username" 输入框宽度设为 100% */
-    margin-bottom: 10px;
-    padding: 8px;
-    box-sizing: border-box;
+  width: 100%; 
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  border-radius: 5px;
 }
 
-.comment-form textarea {
-    width: 100%; /* 将 "Comment" 输入框宽度设为 100% */
-    margin-bottom: 10px;
-    padding: 8px;
-    box-sizing: border-box;
-    height: 150px; /* 指定 "Comment" 输入框的高度 */
+.comment-form textarea,
+.reply-form textarea {
+  width: 100%; 
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 150px; 
+  border: 2px solid #000;
+  border-radius: 5px;
 }
 
-.comment-form button {
-    background-color: #EA0A0A;
-    color: white;
-    padding: 10px 15px;
-    border-color: black;
-    border-radius: 4px;
-    cursor: pointer;
-    align-self: flex-end; /* 将按钮右对齐 */
+.comment-form button,
+.reply-form button {
+  background-color: #EA0A0A;
+  color: white;
+  padding: 10px 15px;
+  border-color: black;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
+  border-radius: 5px;
 }
 
 .comment-form button:hover {
-    background-color: #EA0A0A;
+  background-color: #EA0A0A;
+}
+
+#commentsList {
+  margin-bottom: 40px;
+}
+
+#commentsList li {
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+  list-style: none;
+}
+
+#commentsList li p {
+  margin: 0;
+}
+
+#commentsList li p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 30px;
+  color:darkblue;
+}
+
+#commentsList li p:nth-of-type(2),
+#commentsList li p:nth-of-type(3) {
+  font-size: 20px;
+}
+
+/* #comments-list .item .item-top {
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  gap: 0 16px;
+}
+
+#comments-list .item .item-top span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#comments-list .item img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+#comments-list .item p {
+  font-size: 16px;
+}
+
+#comments-list .item p,
+#comments-list .item .reply {
+  margin-left: 76px;
+}
+
+#comments-list .item .reply {
+  color: gray;
+  font-size: 14px;
+  cursor: pointer;
+} */
+
+/* .reply-form {
+  display: flex;
+  flex-direction: column;
+} */
+
+.community-left {
+  background-color: #000;
+}
+
+.community-left a {
+  display: block;
+  text-decoration: none;
+  padding: 40px 0;
+}
+
+.community-left a span {
+  color: #FFF;
+  font-size: 30px;
+  display: block;
 }

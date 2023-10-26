@@ -1,44 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LuminousOpus Recommandation</title>
+        <title>LuminousOpus Recommendation</title>
         <link rel="stylesheet" href="css/site_styles.css">
         <link rel="stylesheet" href="css/general_styles.css">
         <link rel="stylesheet" href="css/recommendation_styles.css">
         <link rel="stylesheet" href="css/homesplash.css">
-        <link rel="stylesheet" href="css/gallery_styles.css">
-
     </head>
 
     <body>
-        <header class="grid-container">
-            <a href="index.html">
+        <!-- Header section -->
+        <header class="grid-container" aria-label="Header Section">
+            <!-- Brand/logo section with a link back to the index page -->
+            <a href="index.html" aria-label="Home">
                 <div class="brand">
                     <img src="media/logo.png" alt="logo">
                 </div>
             </a>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button>Search</button>
+            <!-- Search container with an input field and a search button -->
+            <div class="search-container" aria-label="Search Container">
+                <input type="text" id="searchInput" placeholder="Search..." aria-label="Search Input">
+                <button aria-label="Search Button">Search</button>
             </div>
         </header>
-        <!-- closes the page-links div -->
 
-        <section class="main-recommendation">
-            <div class="sidebar">
+        <!-- Main content section -->
+        <section class="main-recommendation" aria-label="Main Recommendations">
+            <!-- Sidebar section with navigation links -->
+            <div class="sidebar" aria-label="Sidebar Navigation">
                 <ul>
-                    <li><a href="#section1">Songs>>>>></a></li>
-                    <li><a href="#section2">Artists>>>>></a></li>
-                    <li><a href="#section3">Regions>>>>></a></li>
+                    <!-- Links to different sections -->
+                    <li><a href="#Songs" aria-label="Navigate to Songs">Songs &gt;&gt;&gt;&gt;&gt;</a></li>
+                    <li><a href="#Artists" aria-label="Navigate to Artists">Artists &gt;&gt;&gt;&gt;&gt;</a></li>
+                    <li><a href="#Regions" aria-label="Navigate to Regions">Regions &gt;&gt;&gt;&gt;&gt;</a></li>
                 </ul>
             </div>
 
-            <div class="right">
-                <div class="home_splash">
-                    <div class="img_box">
+            <!-- Right section containing recommended content -->
+            <div class="right" aria-label="Recommended Content">
+                <div class="home_splash" aria-label="Featured Media">
+                    <!-- Image slider for recommendations -->
+                    <div class="img_box" aria-label="Image Carousel">
                         <img src="media/slide1.jpg" alt="slide1">
                         <img src="media/slide2.jpg" alt="slide2">
                         <img src="media/slide3.jpg" alt="slide3">
@@ -46,8 +51,9 @@
                     <div class="left_btn" aria-label="Previous Slide">&lt;</div>
                     <div class="right_btn" aria-label="Next Slide">&gt;</div>
                 </div>
-                <div id="section1">
-                    <div class="title m-2">Songs</div>
+                <div id="Songs" aria-labelledby="songsTitle">
+                    <!-- Section for recommended songs -->
+                    <div class="title m-2" id="songsTitle">Songs</div>
                     <div class="m-2 p-2 item">
                         <img src="media/recommendation/Autumn Variations(album).jpg" alt="Autumn Variations">
                         <div class="description">
@@ -63,8 +69,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="section2">
-                    <div class="title m-2">Artists</div>
+                <div id="Artists" aria-labelledby="artistsTitle">
+                    <!-- Section for recommended artists -->
+                    <div class="title m-2" id="artistsTitle">Artists</div>
                     <div class="m-2 p-2 item">
                         <img src="media/recommendation/doolittle(album).jpg" alt="doolittle">
                         <div class="description">
@@ -80,8 +87,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="section3">
-                    <div class="title m-2">Regions</div>
+                <div id="Regions" aria-labelledby="regionsTitle">
+                    <!-- Section for recommended regions -->
+                    <div class="title m-2" id="regionsTitle">Regions</div>
                     <div class="m-2 p-2 item">
                         <img src="media/recommendation/k.ing(album).jpg" alt="k">
                         <div class="description">
@@ -105,7 +113,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <script src="js/index_interaction.js"></script>

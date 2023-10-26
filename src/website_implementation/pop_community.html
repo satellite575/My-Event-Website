@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pop Music</title>
+        <link rel="stylesheet" href="css/site_styles.css">
+        <link rel="stylesheet" href="css/general_styles.css">
+        <link rel="stylesheet" href="css/homesplash.css">
+        <link rel="stylesheet" href="css/community_styles.css">
+    </head>
+
+    <body>
+
+        <div class="grid-container">
+            <a href="index.html" aria-label="Home Page Link">
+                <div class="brand">
+                    <img src="media/logo.png" alt="logo">
+                </div>
+            </a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search..." aria-label="Search Input">
+                <button aria-label="Search Button">Search</button>
+            </div>
+        </div> <!-- closes the page-links div -->
+
+        <section class="community-container">
+            <div class="community-left">
+                <a href="" aria-label="Pop Music Genre Link"><span>Pop</span></a>
+                <a href="" aria-label="Rock Music Genre Link"><span>Rock</span></a>
+                <a href="" aria-label="HIP-POP Music Genre Link"><span>HIP-POP</span></a>
+                <a href="" aria-label="Electronic Music Genre Link"><span style="font-size: 25px;">Electronic</span></a>
+                <a href="" aria-label="Jazz Music Genre Link"><span>Jazz</span></a>
+                <a href="" aria-label="Classical Music Genre Link"><span style="font-size: 25px;">Classical</span></a>
+                <a href="" aria-label="Blues Music Genre Link"><span>Blues</span></a>
+                <a href="" aria-label="Country Music Genre Link"><span>Country</span></a>
+            </div>
+            <div class="community-right">
+                <div class="community-splash">
+                    <div class="community-slogan" aria-label="Pop Music Title">
+                        <h1>Pop Music</h1>
+                    </div>
+                    <div class="home_splash" aria-labelledby="homeSplashLabel">
+                        <div class="img_box" aria-label="Image Slider">
+                            <img src="media/slide1.jpg" alt="slide1">
+                            <img src="media/slide2.jpg" alt="slide2">
+                            <img src="media/slide3.jpg" alt="slide3">
+                        </div>
+                        <div class="left_btn" aria-label="Previous Slide">&lt;</div>
+                        <div class="right_btn" aria-label="Next Slide">&gt;</div>
+                    </div>
+                </div>
+
+                <div class="comments-container">
+                    <h1 aria-label="First Comment Title">Even though we have never met</h1>
+                    <h1 aria-label="Second Comment Title">We are more alike than everyone else's souls</h1>
+                    <div class="comment-form">
+                        <h2>SPEAK FREELY!</h2>
+                        <form id="commentForm" action="https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/comments/">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" placeholder="Your username" required aria-label="Username Input">
+
+                            <label for="comment">Comment:</label>
+                            <textarea id="comment" name="comment" placeholder="Write your comment here" required aria-label="Comment Text Area"></textarea>
+
+                            <label for="rating">Rating:</label>
+                            <input type="number" id="rating" placeholder="Rating (1-5)" max="5" min="1" aria-label="Rating Input">
+
+                            <button type="submit" aria-label="Submit Comment Button">Submit Comment</button>
+                        </form>
+                    </div>
+                    <h1>Comments</h1>
+                    <ul id="commentsList" aria-label="Comments List"></ul>
+
+                </div>
+            </div>
+        </section>
+
+    <script src="js/index_interaction.js"></script>
+    <script src="js/community_interaction.js"></script>
+</body>
+
+</html>

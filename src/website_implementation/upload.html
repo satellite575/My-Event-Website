@@ -8,20 +8,9 @@
 		<link rel="stylesheet" href="css/site_styles.css">
 		<link rel="stylesheet" href="css/general_styles.css">
 		<link rel="stylesheet" href="css/upload_styles.css">
-		<link rel="stylesheet" href="css/gallery_styles.css">
 	</head>
 
 	<body>
-
-		<!-- <div class="container">
-			<button id="postButton">Post Music Audio</button>
-			<button id="getButton">Get Musician Data</button>
-
-			<div id="resultContainer">
-				<h2>Results:</h2>
-				<pre id="resultOutput"></pre>
-			</div>
-		</div> -->
 
 		<header class="grid-container">
 			<a href="index.html">
@@ -49,16 +38,16 @@
 				</ul>
 			</div>
 
-			<div class="right">
-				<from id= "MusicianForm" class="upload-form m-2" enctype="multipart/form-data">
-					<div class="group-item">
-						<label for="username">Name:</label>
-						<input type="text" id="username" name="username" placeholder="Your username" required>
+			<div class="right" aria-label="Upload Form">
+				<form action = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/musicians/"  method= "post" class="upload-form m-2" enctype="multipart/form-data">
+					<div class="group-item" aria-labelledby="name-label">
+						<label for="name" id="name-label">Name:</label>
+						<input type="text" id="name" name="name" placeholder="Your username" required>
 					</div>
 
 					<div class="group-item">
-						<label for="songtitle">Song title:</label>
-						<input type="text" id="songtitle" name="songtitle" placeholder="Your Song title" required>
+						<label for="song_title">Song title:</label>
+						<input type="text" id="song_title" name="song_title" placeholder="Your Song title" required>
 					</div>
 
 					<div class="group-item">
@@ -80,23 +69,18 @@
 						</div>
 					</div>
 
-					<div class="group-item">
-						<label for="Audio" id="Audio-file-input-label">Audio file</label>
-						<input style="border: none" type="file" id="Audio-file-input" name="audio" accept=".mp3, .wav, .ogg, .flac, .aac, .m4a" ><span id="selected-file-name"></span>
-					</div>
-
-					<div class="group-item">
-						<label for="code">Website code:</label>
-						<input  type="text" id="code" name="code" placeholder="Your Website code" required>
+					<div class="group-item"  aria-labelledby="audio-label">
+						<label for="audio_file" id="Audio-file-input-label" >Audio file</label>
+						<input style="border: none; display: flex-end;" type="file" id="Audio-file-input" name="audio_file" accept=".mp3, .wav, .ogg, .flac, .aac, .m4a" aria-describedby="selected-file-name"><span id="selected-file-name"></span>
 					</div>
 
 					<div>
-						<input class="button" type="submit" value="Post">
+						<input class="button" type="submit" value="Submit" aria-label="Submit Form">
 					</div>
 
 				</div>
 			</div>
 		</section>
-		<!-- <script src="upload_interaction.js"></script> -->
+		<script src="js/upload_interaction.js"></script>
 	</body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LuminousOpus Profile</title>
+        <link rel="stylesheet" href="css/site_styles.css">
+        <link rel="stylesheet" href="css/general_styles.css">
+        <link rel="stylesheet" href="css/profile_styles.css">
+    </head>
+
+    <body>
+        <!-- Header section -->
+        <header class="grid-container">
+            <!-- Brand/logo section with a link back to the index page -->
+            <a href="index.html" aria-label="Home Page Link">
+                <div class="brand">
+                    <img src="media/logo.png" alt="LuminousOpus logo">
+                </div>
+            </a>
+            <!-- Search container with an input field and a search button -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search..." aria-label="Search Input">
+                <button aria-label="Search Button">Search</button>
+            </div>
+        </header>
+
+        <!-- Main content section -->
+        <section class="main-recommendation">
+            <!-- Sidebar section for user profile information -->
+            <div class="sidebar">
+                <div class="profile-info" aria-label="Profile Information">
+                    <img src="media/album_cover2.jpg" alt="Profile picture">
+                    <p>Name</p>
+                    <p>Male</p>
+                </div>
+                <!-- Navigation links in the sidebar -->
+                <ul aria-label="Navigation Links">
+                    <li><a href="#section1">Playlist</a></li>
+                    <li><a href="upload.html">Upload</a></li>
+                </ul>
+            </div>
+
+            <!-- Right section for published works, joined communities, and events -->
+            <div class="right">
+                <div class="title m-2" aria-label="Published Works Section">Published Works</div>
+                <div class="list" aria-labelledby="publishedWorksList">
+                    <!-- List of published works -->
+                    <a class="p-2 item" aria-label="Dark side of the Moon">
+                        <img src="media/recommendation/DarksideoftheMoon(album).jpg" alt="DarksideoftheMoon cover">
+                        <p>Dark side of the Moon</p>
+                    </a>
+                    <a class="p-2 item" aria-label="Doolittle">
+                        <img src="media/recommendation/doolittle(album).jpg" alt="Doolittle cover">
+                        <p>Doolittle</p>
+                    </a>
+                    <a class="p-2 item" aria-label="FooFighters">
+                        <img src="media/recommendation/FooFighters(album).jpg" alt="FooFighters cover">
+                        <p>FooFighters</p>
+                    </a>
+                </div>
+                <div class="title m-2" aria-label="Joined Communities Section">Joined Communities</div>
+                <div class="list" aria-labelledby="joinedCommunitiesList">
+                    <!-- List of joined communities -->
+                    <a class="p-2 item" aria-label="Pop Community">
+                        <img src="media/pop.jpg" alt="Pop genre cover">
+                        <p>Pop</p>
+                    </a>
+                    <a class="p-2 item" aria-label="Blue Community">
+                        <img src="media/blue.jpg" alt="Blue genre cover">
+                        <p>Blue</p>
+                    </a>
+                    <a class="p-2 item" aria-label="HipPop Community">
+                        <img src="media/hippop.jpg" alt="HipPop genre cover">
+                        <p>HipPop</p>
+                    </a>
+                </div>
+                <div class="title m-2" aria-label="Events Section">Events</div>
+                <div class="list" aria-labelledby="eventsList">
+                    <!-- List of events -->
+                    <a class="p-2 item" aria-label="Events1">
+                        <img src="media/community/events1.jpg" alt="Events1 cover">
+                        <p>Events1</p>
+                    </a>
+                    <a class="p-2 item" aria-label="Events2">
+                        <img src="media/community/events2.jpg" alt="Events2 cover">
+                        <p>Events2</p>
+                    </a>
+                    <a class="p-2 item" aria-label="Events3">
+                        <img src="media/community/events1.jpg" alt="Events3 cover">
+                        <p>Events3</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
+
